@@ -3,10 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <title>Aurinko Re – Global Specialty Reinsurance MGA</title>
-
-<img src="images/logo.png" alt="Foto Logo" style="width:300px;">
-
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <style>
     :root {
       --primary: #0b3c5d;
@@ -14,23 +12,49 @@
       --bg: #f7f9fc;
       --text: #222;
       --muted: #666;
+      --alt-bg: #eef2f7;
     }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
     body {
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
     }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .top-logo {
+      width: 100%;
+      padding: 20px 0 0 20px;
+      display: flex;
+    }
+
+    .top-logo img {
+      width: 300px;
+    }
+
     header {
       background: linear-gradient(135deg, #0b3c5d, #102a43);
       color: #fff;
-      padding: 60px 20px 40px;
+      padding: 80px 20px 60px;
     }
+
     header .container {
       max-width: 1100px;
       margin: 0 auto;
@@ -38,15 +62,18 @@
       flex-direction: column;
       gap: 20px;
     }
+
     header h1 {
-      font-size: 2.4rem;
+      font-size: 2.6rem;
       letter-spacing: 0.03em;
     }
+
     header p {
       max-width: 650px;
       font-size: 1.05rem;
       color: #e0e7ff;
     }
+
     .tagline {
       font-weight: 600;
       color: var(--secondary);
@@ -54,67 +81,155 @@
       letter-spacing: 0.12em;
       font-size: 0.85rem;
     }
+
     nav {
-      background: #fff;
+      background: rgba(255, 255, 255, 0.92);
       border-bottom: 1px solid #e1e4ea;
       position: sticky;
       top: 0;
       z-index: 10;
+      backdrop-filter: blur(8px);
     }
+
     nav .container {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 0 auto;
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 12px;
       padding: 10px 20px;
       justify-content: center;
     }
+
     nav a {
       text-decoration: none;
       color: var(--primary);
       font-size: 0.9rem;
-      padding: 6px 10px;
+      padding: 8px 16px;
       border-radius: 999px;
       border: 1px solid transparent;
+      white-space: nowrap;
+      flex: 0 0 auto;
     }
+
     nav a:hover {
-      border-color: var(--secondary);
-      color: var(--secondary);
+      background: #f3f6fa;
+      border-color: transparent;
+      color: var(--primary);
     }
+
     section {
-      padding: 50px 20px;
+      padding: 70px 20px;
+      background: white;
+      scroll-margin-top: 90px;
+      border-top: 1px solid #eef2f7;
     }
+
+    .alt-section {
+      background: var(--alt-bg);
+    }
+
     .section-inner {
       max-width: 1100px;
       margin: 0 auto;
+      padding: 0 10px;
     }
+
     h2 {
-      font-size: 1.8rem;
-      margin-bottom: 10px;
+      font-size: 2.2rem;
+      margin-bottom: 18px;
       color: var(--primary);
+      font-weight: 700;
+      letter-spacing: -0.5px;
     }
+
+    h2::after {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 3px;
+      background: var(--secondary);
+      margin-top: 10px;
+    }
+
     h3 {
-      font-size: 1.2rem;
-      margin: 20px 0 8px;
+      font-size: 1.15rem;
+      margin: 18px 0 10px;
       color: var(--primary);
+      font-weight: 600;
     }
+
     p {
       margin-bottom: 10px;
       color: var(--muted);
     }
+
+    p,
+    li {
+      font-size: 0.98rem;
+      line-height: 1.75;
+    }
+
+    ul,
+    ol {
+      margin-left: 18px;
+      margin-bottom: 10px;
+      color: var(--muted);
+    }
+
+    ul li::marker {
+      color: var(--secondary);
+    }
+
+    li {
+      margin-bottom: 4px;
+    }
+
     .grid-2 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 25px;
       margin-top: 20px;
     }
+
+
+    .region-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.region-card {
+  text-align: center;
+}
+
+.region-card h3 {
+  margin-bottom: 12px;
+  color: var(--primary);
+}
+
+.region-card img {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
     .card {
       background: #fff;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border: 1px solid #edf1f5;
     }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
+    }
+
     .pill {
       display: inline-block;
       padding: 3px 10px;
@@ -126,35 +241,42 @@
       letter-spacing: 0.08em;
       margin-bottom: 8px;
     }
-    ul {
-      margin-left: 18px;
-      margin-bottom: 10px;
-      color: var(--muted);
-    }
-    li {
-      margin-bottom: 4px;
-    }
+
     .team-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 20px;
       margin-top: 20px;
     }
+
+    .team-card {
+      text-align: left;
+    }
+
     .team-card h4 {
-      margin-bottom: 4px;
+      margin-bottom: 8px;
       color: var(--primary);
     }
-    .team-role {
-      font-size: 0.9rem;
-      color: var(--secondary);
-      margin-bottom: 6px;
+
+    .team-card img {
+      width: 300px;
+      margin: 8px 0 16px;
     }
+
+    .team-role {
+      font-size: 0.92rem;
+      color: var(--secondary);
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+
     .kpi-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 20px;
       margin-top: 20px;
     }
+
     .kpi {
       background: #fff;
       border-radius: 10px;
@@ -162,16 +284,19 @@
       text-align: center;
       box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
     }
+
     .kpi span {
       display: block;
       font-size: 1.4rem;
       font-weight: 700;
       color: var(--primary);
     }
+
     .kpi small {
       font-size: 0.8rem;
       color: var(--muted);
     }
+
     table {
       width: 100%;
       border-collapse: collapse;
@@ -181,340 +306,879 @@
       overflow: hidden;
       box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
     }
-    th, td {
+
+    th,
+    td {
       padding: 10px 12px;
       font-size: 0.9rem;
       text-align: left;
       border-bottom: 1px solid #e5e7eb;
     }
+
     th {
       background: #f1f5f9;
       color: var(--primary);
       font-weight: 600;
     }
+
     tr:last-child td {
       border-bottom: none;
     }
+
     tfoot td {
       font-weight: 600;
       background: #f9fafb;
     }
-    .cta {
-      text-align: center;
-      padding: 60px 20px 80px;
-      background: #0b3c5d;
-      color: #fff;
-    }
-    .cta h2 {
-      color: #fff;
-      margin-bottom: 10px;
-    }
-    .cta p {
-      color: #e0e7ff;
-      margin-bottom: 20px;
-    }
-    .cta a {
-      display: inline-block;
-      padding: 10px 22px;
-      border-radius: 999px;
-      background: var(--secondary);
-      color: #fff;
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 600;
-    }
-    .cta a:hover {
-      opacity: 0.9;
-    }
+
     footer {
       text-align: center;
       padding: 15px 10px 25px;
       font-size: 0.8rem;
       color: #94a3b8;
     }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 30px;
+    }
+
+    #overview h3 {
+      font-size: 1.25rem;
+    }
+
+    #overview p {
+      font-size: 1rem;
+    }
+
+    .overview-bottom {
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .overview-bottom img {
+      width: 300px;
+      margin: 20px auto;
+    }
+
+    .mission-vision-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(280px, 1fr));
+      gap: 28px;
+      margin-top: 30px;
+    }
+
+    .mission-box {
+      background: #fff;
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      min-height: 160px;
+    }
+
+    .mission-box h3 {
+      color: #0b2a5b;
+      margin-bottom: 12px;
+    }
+
+    .mission-box p {
+      color: #5b6474;
+      margin-bottom: 0;
+    }
+
+    .mission-highlight {
+      background: rgba(241, 143, 1, 0.08);
+      border: 1px solid rgba(241, 143, 1, 0.18);
+      box-shadow: 0 8px 20px rgba(241, 143, 1, 0.06);
+    }
+
+    .mission-image-wrap {
+      margin-top: 35px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .mission-image-wrap img {
+      width: 100%;
+      max-width: 150px;
+      border-radius: 24px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+
+.mission-layout {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr 1fr;
+  gap: 30px;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.mission-center {
+  display: flex;
+  justify-content: center;
+}
+
+.mission-center img {
+  width: 100%;
+  max-width: 240px;
+  border-radius: 20px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+
+/* MÓVIL */
+@media (max-width: 768px) {
+  .mission-layout {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .mission-center img {
+    max-width: 220px;
+    margin: 20px auto;
+  }
+}
+
+    .tablaexcel {
+  width: 100%;
+  max-width: 1200px;   /* controla el ancho máximo */
+  margin: 40px auto;   /* centra */
+}
+
+.tablaexcel img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+    .team-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+      margin-top: 30px;
+    }
+
+    .team-intro-left {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .team-intro-box {
+      background: white;
+      border-radius: 20px;
+      padding: 18px 22px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .team-intro-box h3 {
+      margin-bottom: 8px;
+    }
+
+    .team-intro-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .team-intro-image img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 20px;
+    }
+
+    .portfolio-card img {
+      width: 300px;
+      margin-bottom: 12px;
+    }
+
+    .portfolio-card h3 {
+      margin-top: 14px;
+    }
+
+    .centered-card {
+      margin: 40px auto 0;
+      max-width: 700px;
+      padding: 30px;
+      border: 1px solid #e6eaf0;
+      background: #fbfcfe;
+    }
+
+    #strategy .card h3 {
+      font-size: 1.2rem;
+    }
+
+    .monitoring-section {
+      background: #082a5e;
+      padding: 90px 20px;
+    }
+
+   .monitoring-section .section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+    #monitoring h2 {
+      color: white;
+    }
+
+    .monitoring-top {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-top: 34px;
+    }
+
+    .monitoring-card,
+    .monitoring-bar {
+      backdrop-filter: blur(6px);
+    }
+
+    .monitoring-card {
+      background: rgba(255, 255, 255, 0.10);
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      border-radius: 24px;
+      padding: 30px;
+      color: white;
+    }
+
+    .monitoring-card h3 {
+      color: white;
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+
+    .monitoring-card ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .monitoring-card li {
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    .monitoring-bars {
+      margin-top: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .monitoring-bar {
+      background: rgba(255, 255, 255, 0.10);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 20px;
+      padding: 18px;
+      color: white;
+      font-size: 17px;
+      line-height: 1.5;
+    }
+
+    .comparison-title {
+      margin-top: 30px;
+      color: white;
+    }
+
+    .comparison-image {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .comparison-image img {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      border-radius: 20px;
+    }
+
+    .team-card img,
+    .portfolio-card img,
+    .mission-image-wrap img,
+    .team-intro-image img,
+    .comparison-image img {
+      border-radius: 18px;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+    }
+
+    .cta-section {
+      background: #e9edf3;
+      padding: 80px 20px;
+    }
+
+    .cta-box {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: #f5f7fa;
+      border-radius: 30px;
+      padding: 80px 40px;
+      text-align: center;
+    }
+
+    .cta-box h2 {
+      font-size: clamp(36px, 4vw, 56px);
+      font-weight: 700;
+      color: #0b2a5b;
+      margin: 20px 0 30px;
+      line-height: 1.2;
+    }
+
+    .cta-box h2::after {
+      display: none;
+    }
+
+    .cta-divider {
+      width: 60px;
+      height: 4px;
+      background: #ff8a00;
+      margin: 0 auto 40px;
+    }
+
+    .cta-button {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 30px;
+
+  background: white;
+  color: #0b2a5b !important;  /* 👈 clave */
+  
+  border: 1px solid #d0d6e0;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(241, 143, 1, 0.35);
+}
+
+.cta-button:link,
+.cta-button:visited {
+  color: #0b2a5b !important;
+}
+
+    @media (max-width: 900px) {
+      .monitoring-top,
+      .overview-grid,
+      .team-intro {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .mission-vision-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .mission-image-wrap img {
+        max-width: 280px;
+      }
+
+      .top-logo img,
+      .team-card img,
+      #overview img,
+      #portfolio img {
+        width: 100%;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    footer {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 0.9rem;
+  color: #64748b;
+  background: #f1f5f9;
+}
+
+.footer-content a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-content a:hover {
+  color: var(--secondary);
+}
+
+    .naic-box {
+  max-width: 900px;
+  margin: 30px auto 0;
+  background: #fff;
+  border: 1px solid #e6eaf0;
+  border-radius: 20px;
+  padding: 24px 28px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+}
+
+.naic-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.naic-text {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+
+footer {
+  background: linear-gradient(135deg, #0b3c5d, #102a43);
+  color: #e0e7ff;
+  text-align: center;
+  padding: 20px 20px;
+}
+
+.footer-content p {
+  margin-bottom: 10px;
+}
+
+.footer-content a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-content a:hover {
+  color: var(--secondary);
+}
+
+.legal-links {
+  margin-top: 15px;
+  font-size: 0.8rem;
+}
+
+.legal-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.legal-links a:hover {
+  color: var(--secondary);
+}
+
+
   </style>
 </head>
-<body>
 
-<header>
-  <div class="container">
-    <div class="tagline">Global Specialty Reinsurance MGA</div>
-    <h1>Aurinko Re</h1>
-    <p>
-      Achieve success through our strategic partnership. Aurinko Re operates as a specialized
-      Credit &amp; Surety reinsurance MGA, combining underwriting discipline, actuarial rigor and
-      deep market relationships across Europe and Asia.
-    </p>
+<body id="top">
+  <div class="top-logo">
+    <img src="images/Logotransparente.png" alt="Foto Logotransparente">
   </div>
-</header>
 
-<nav>
-  <div class="container">
-    <a href="#overview">Executive Overview</a>
-    <a href="#mission">Mission &amp; Vision</a>
-    <a href="#value">Value Proposition</a>
-    <a href="#team">MGA &amp; Team</a>
-    <a href="#portfolio">Portfolio Management</a>
-    <a href="#strategy">Reinsurance Strategy</a>
-    <a href="#monitoring">Monitoring &amp; Positioning</a>
+  <header>
+    <div class="container">
+      <h1>Aurinko Re</h1>
+      <div class="tagline">Global Specialty Reinsurance MGA</div>
+      <p>
+        Achieve success through our strategic partnership. Aurinko Re operates as a specialized
+        Credit &amp; Surety reinsurance MGA, combining underwriting discipline, actuarial rigor and
+        deep market relationships across Europe and Asia.
+      </p>
     </div>
-</nav>
+  </header>
 
-<section id="overview">
-  <div class="section-inner">
-    <h2>Executive Overview</h2>
-    <div class="grid-2">
-      <div>
-        <h3>Executive Summary</h3>
-        <p><strong>Aurinko Re</strong> operates as a specialized Reinsurer‑MGA focused on
-          <strong>Credit and Surety reinsurance treaties</strong>.</p>
-        <p>
-          We leverage deep expertise in underwriting, insurance, reinsurance, brokerage and
-          actuarial science to identify and structure high‑value treaty opportunities across
-          Europe and Asia, under a disciplined risk appetite.
-        </p>
-      </div>
-      <div>
-        <h3>Our Team &amp; Network</h3>
-        <ul>
-          <li>Reinsurance underwriting expertise</li>
-          <li>Actuarial &amp; technical capabilities</li>
-          <li>Market intelligence and benchmarking</li>
-          <li>Long‑standing relationships with leading carriers, reinsurers and regulators</li>
-        </ul>
-        <p>
-          This combination allows us to navigate complex markets, secure optimal capacity and
-          deliver disciplined underwriting performance as a trusted partner for sustainable,
-          profitable growth.
-        </p>
-      </div>
+  <nav>
+    <div class="container">
+      <a href="#overview">Executive Overview</a>
+      <a href="#capacity">Surety Capacity</a>
+      <a href="#mission">Mission &amp; Vision</a>
+      <a href="#value">Value Proposition</a>
+      <a href="#team">MGA &amp; Team</a>
+      <a href="#portfolio">Portfolio Management</a>
+      <a href="#strategy">Reinsurance Strategy</a>
+      <a href="#monitoring">Monitoring &amp; Positioning</a>
+      <a href="#contact">Contact us</a>
     </div>
-  </div>
-</section>
+  </nav>
 
-<section id="mission">
-  <div class="section-inner">
-    <h2>Mission &amp; Vision</h2>
-    <div class="grid-2">
-      <div class="card">
-        <div class="pill">Mission</div>
-        <p>
-          To provide disciplined and structured Credit &amp; Surety reinsurance solutions in
-          profitable portfolios which support your sustainable growth.
-        </p>
-      </div>
-<img src="images/vision.png" alt="Foto vision" style="width:300px;">
-      <div class="card">
-        <div class="pill">Vision</div>
-        <p>
-          To be a trusted reference in Credit &amp; Surety reinsurance, recognized for
-          underwriting excellence and long‑term partnerships.
-        </p>
-      </div>
-    </div>
-    <p style="margin-top:20px;">
-      <strong>Let’s build a resilient and profitable reinsurance portfolio of treaties together.</strong>
-    </p>
-  </div>
-</section>
+  <section id="overview">
+    <div class="section-inner">
+      <h2>01 Executive Overview</h2>
 
-<section id="value">
-  <div class="section-inner">
-    <h2>Our Value Proposition</h2>
-    <div class="grid-2">
-      <div class="card">
-        <h3>Underwriting Discipline</h3>
-        <p>Data‑driven underwriting discipline with clear guidelines aligned to your growth strategy, tenors and profitability targets.</p>
-      </div>
-      <div class="card">
-        <h3>Transparent Performance</h3>
-        <p>Real‑time monitoring and data visibility via live dashboards, ensuring full alignment of interests.</p>
-      </div>
-      <div class="card">
-        <h3>Reinsurance Strategies</h3>
-        <p>Tailored reinsurance strategies designed to match your risk profile, capital needs and market positioning.</p>
-      </div>
-      <div class="card">
-        <h3>Market Relationships</h3>
-        <p>Strong relationships with leading insurers, reinsurers and brokers to secure competitive, sustainable capacity.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="team">
-  <div class="section-inner">
-    <h2>MGA Review &amp; Team</h2>
-
-    <h3>MGA Internal Review</h3>
-    <div class="grid-2">
-      <div class="card">
-
-        <h4>Underwriting Guidelines</h4>
-        <ul>
-          <li>Alignment with your growth strategy</li>
-          <li>Respect of tenors and target profitability</li>
-        </ul>
-        <h4>Capacity Needs</h4>
-        <ul>
-          <li>Capital adequacy for exposures</li>
-        </ul>
-        <h4>Profitability Forecast</h4>
-        <ul>
-          <li>Scenario modelling and stress tests</li>
-        </ul>
-      </div>
-      <div class="card">
-
-        <h4>Team Expertise</h4>
-<img src="images/InternaREV.jpg" alt="Foto InternaREV" style="width:300px;">
-        <p>Multidisciplinary team combining underwriting, actuarial, data and claims capabilities.</p>
-      </div>
-    </div>
-
-    <h3 style="margin-top:30px;">Leadership Team</h3>
-    <div class="team-grid">
-      <div class="card team-card">
-        <h4>Yamilet Morote‑Jagut</h4>
-       <img src="images/Yami.png" alt="Foto Yami" style="width:300px;">
-        <div class="team-role">Chief Underwriting Officer – Co‑founder</div>
-        <p>Mastère en Management financier international.</p>
-        <p>30+ years international experience as Senior Reinsurance &amp; Insurance Underwriter in Surety, Credit, Mortgage &amp; Political Risk.</p>
-        <p>Portfolio premium: EUR 13 million. Based in Paris, France.</p>
-      </div>
-      <div class="card team-card">
-        <h4>Cristina Rivas</h4>
-<img src="images/Cristina.png" alt="Foto Cristina" style="width:300px;">
-
-        <div class="team-role">Chief Executive Officer – Co‑founder</div>
-        <p>Master of Science (MS) in Actuarial Science.</p>
-        <p>25+ years of experience with senior roles at Swiss Re and Nacional de Reaseguros, managing portfolios over EUR 360 million.</p>
-        <p>55M+ in intermediated premiums across all reinsurance lines. Based in Madrid, Spain.</p>
-      </div>
-    </div>
-
-    <h3 style="margin-top:30px;">Extended Team</h3>
-    <div class="team-grid">
-      <div class="card team-card">
-<img src="images/lucia.png" alt="Foto lucia" style="width:300px;">
-        <h4>Lucía González Rodríguez</h4>
-        <div class="team-role">Senior Account Executive – Pricing &amp; Data Analyst</div>
-      </div>
-      <div class="card team-card">
-<img src="images/antonio.png" alt="Foto antonio" style="width:200px;">
-        <h4>Antonio Rito Batalha</h4>
-        <div class="team-role">Senior Account Executive – Claims Handling</div>
-      </div>
-      <div class="card team-card">
-<img src="images/javier.png" alt="Foto javier" style="width:300px;">
-        <h4>Javier Quemada Fernández‑Mariña</h4>
-        <div class="team-role">Junior Underwriter</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="portfolio">
-  <div class="section-inner">
-    <h2>Portfolio Assessment &amp; Management</h2>
-    <div class="grid-2">
-      <div class="card">
-<img src="images/RiskECE.jpg" alt="Foto RiskECE" style="width:300px;">
-
-        <h3>Risk Evaluation of Cedants</h3>
-        <ul>
-          <li>Portfolio quality assessment</li>
-          <li>Segmentation by product, geography, risk type, tenor and political risk</li>
-        </ul>
-      </div>
-      <div class="card">
-<img src="images/PerformA.png" alt="Foto PerformA" style="width:300px;">
-
-        <h3>Performance Analysis</h3>
-        <ul>
-          <li>Actuarial models</li>
-          <li>Loss ratio, combined ratio, benchmarks</li>
-        </ul>
-      </div>
-      <div class="card">
-<img src="images/dataco.png" alt="Foto dataco" style="width:300px;">
-        <h3>Data Collection</h3>
-        <ul>
-          <li>Underwriting data, loss ratios, exposure</li>
-          <li>Bordereaux management</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="strategy">
-  <div class="section-inner">
-    <h2>Reinsurance Strategy &amp; Placement</h2>
-
-    <div class="grid-2">
-      <div class="card">
-        <h3>Structures</h3>
-        <ul>
-          <li><strong>Quota Share</strong>: proportional sharing of premiums and losses</li>
-          <li><strong>Excess of Loss</strong>: protection against large individual losses</li>
-          <li><strong>Stop Loss</strong>: aggregate protection for portfolio volatility</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Strategic Approach</h3>
-        <ul>
-          <li>Define objectives: balanced credit &amp; surety portfolio</li>
-          <li>Structure selection: match risk profile to reinsurance appetite</li>
-          <li>Retention optimization: balance retained vs. ceded risk</li>
-        </ul>
-      </div>
-    </div>
-
-    <h3 style="margin-top:30px;">Master Placement Approach</h3>
-    <ol style="margin-left:18px; color:#666;">
-      <li>A potential list of cedants at your disposal (Annex 1).</li>
-      <li>Engage insurers for quotations.</li>
-      <li>Prepare submission: portfolio summary, actuarial analysis, deal rationale.</li>
-      <li>Negotiate terms, limits and pricing for your convenience.</li>
-      <li>Finalize treaty and bind coverage with countersigned agreements.</li>
-      <li>Monitor portfolio and bordereaux.</li>
-    </ol>
-  </div>
-</section>
-
-<section id="monitoring">
-  <div class="section-inner">
-    <h2>Monitoring, Reporting &amp; Competitive Positioning</h2>
-
-    <div class="grid-2">
-      <h3>Monitoring &amp; Reporting</h3>
-        <ul>
-          <li>Quarterly bordereaux to reinsurers</li>
-          <li>Claims reporting</li>
-          <li>Annual performance review and strategy adjustments</li>
-        </ul>
-<img src="images/MONI.jpg" alt="Foto MONI" style="width:300px;">
-      </div>
-      <div class="card">
-       
-    </div>
-<div class="card">
- <h3>Competitive Advantages</h3>
-        <ul>
-          <li>Advanced analytics and modelling</li>
-          <li>Underwriting discipline and governance</li>
-          <li>Transparent reporting and reinsurer trust</li>
-        </ul>
-  <img src="images/advan.png" alt="Foto advan" style="width:300px;">
-      </div>
-  </div>
-    <h3 style="margin-top:30px;">Direct Reinsurer vs. MGA Partnership</h3>
-    <p>
-<img src="images/COMPA.png" alt="Foto COMPA" style="width:900px;">
+      <div class="overview-grid">
+        <div>
+          <h3>Executive Summary</h3>
+          <p>
+            Aurinko Re combines reinsurance underwriting, actuarial capability, market intelligence and long-standing relationships with carriers, reinsurers and regulators to identify and structure high-value treaty opportunities under a disciplined appetite.
+          </p>
+          <p>
+            We operate as a specialized Reinsurer-MGA with a clear focus on Credit and Surety reinsurance treaties. Our approach blends technical analysis, placement discipline and long-term partnership thinking.
+          </p>
         </div>
-Aurinko Re offers a flexible, partnership‑driven MGA model, combining the technical depth of a reinsurer
-      with the agility, proximity and specialization of an MGA dedicated to Credit &amp; Surety.
-    </p>
+
+        <div>
+          <h3>Team &amp; Network</h3>
+          <ul>
+            <li>Reinsurance underwriting expertise</li>
+            <li>Actuarial &amp; technical capabilities</li>
+            <li>Market intelligence and benchmarking</li>
+            <li>Long-standing relationships with leading carriers, reinsurers and regulators</li>
+          </ul>
+          <p>
+            This combination allows us to navigate complex markets, secure optimal capacity and deliver disciplined underwriting performance as a trusted partner for sustainable, profitable growth.
+          </p>
+        </div>
+      </div>
+
+      <div class="overview-bottom">
+        <h3>Aurinko Re: Reinsurance support by AmFirst Group</h3>
+        <p>
+          <strong>AURINKO RE</strong> strong partner <strong>AmFirst Specialty Insurance</strong> is USA Reinsurer, rated <strong>A- AM BEST</strong>.
+        </p>
+
+        <img src="images/logoamfirst.png" alt="Amfirst">
+
+      
+      </div>
+    </div>
+  </section>
+<section id="capacity" class="alt-section">
+  <div class="section-inner">
+    <h2>02 Surety Capacity</h2>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>Core Lines of Business</h3>
+        <p>
+          Aurinko Re is a specialised reinsurance MGA focused on <strong>Credit</strong> and
+          <strong>Surety</strong> reinsurance.
+        </p>
+        <ul>
+          <li>Credit Reinsurance</li>
+          <li>Surety Reinsurance</li>
+          <li>Treaty &amp; Facultative structures</li>
+        </ul>
+      </div>
+
+<div class="region-grid">
+
+  <div class="region-card">
+    <h3>APAC Markets</h3>
+    <img src="images/apac-countries.jpg" alt="APAC Region">
+  </div>
+
+  <div class="region-card">
+    <h3>EMEA Markets</h3>
+    <img src="images/EMEA-map-region-Countries.jpg" alt="EMEA Region">
+  </div>
+
+</div>
+
+      <div class="card">
+        <h3>Geographical Scope</h3>
+        <p>
+          We operate across <strong>EMEA</strong> and <strong>APAC</strong>, combining technical
+          underwriting discipline, actuarial capability and strong market relationships.
+        </p>
+        <ul>
+          <li>EMEA markets</li>
+          <li>APAC markets</li>
+          <li>International broker and reinsurer network</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="centered-card card">
+      <h3>Surety Expertise</h3>
+      <p>
+        Our underwriting focus includes a broad range of surety classes, including construction,
+        advance payment, customs, tax, renewable energy and other commercial bond solutions.
+      </p>
+    </div>
   </div>
 </section>
+
+
+  <section id="mission">
+    <div class="section-inner">
+      <h2>03 Mission &amp; Vision</h2>
+
+      <div class="mission-layout">
+
+  <div class="mission-box mission-highlight">
+    <h3>Mission</h3>
+    <p>
+      To provide disciplined and structured Credit & Surety reinsurance solutions in profitable portfolios which support sustainable growth.
+    </p>
+  </div>
+
+  <div class="mission-center">
+    <img src="images/vision.png" alt="Mission Vision">
+  </div>
+
+  <div class="mission-box">
+    <h3>Vision</h3>
+    <p>
+      To be a trusted reference in Credit & Surety reinsurance, recognized for underwriting excellence and long-term partnerships.
+    </p>
+  </div>
+
+</div>
+  </section>
+
+  <section id="value" class="alt-section">
+    <div class="section-inner">
+      <h2>04 Our Value Proposition</h2>
+
+      <div class="value-grid">
+
+
+        <div class="card">
+          <h3>Reinsurance Strategies</h3>
+          <p>Tailored treaty structures adapted to portfolio profile, retention objectives and capital needs.</p>
+        </div>
+
+        <div class="card">
+          <h3>Underwriting Discipline</h3>
+          <p>Clear underwriting guidelines aligned with growth strategy, tenors, exposure limits and profitability targets.</p>
+        </div>
+
+        <div class="card">
+          <h3>Market Relationships</h3>
+          <p>Strong relationships across insurers, reinsurers and brokers to support efficient placement and trust.</p>
+        </div>
+
+        <div class="card">
+          <h3>Transparent Performance</h3>
+          <p>Real-time monitoring mindset, data visibility and structured reporting that align interests across stakeholders.</p>
+        </div>
+      </div>
+
+
+<h3 style="margin-top:80px; text-align:center; font-size:1.8rem;">
+  Direct Reinsurer vs MGA Partnership
+</h3>
+      <div class="tablaexcel">
+  <img src="images/Tablaexcel.png" alt="tablaexcel">
+</div>
+    </div>
+  </section>
+
+  <section id="team">
+    <div class="section-inner">
+      <h2>05 MGA Review &amp; Team</h2>
+
+      <div class="team-intro">
+        <div class="team-intro-left">
+          <div class="team-intro-box">
+            <h3>Underwriting Guidelines</h3>
+            <p>Alignment with your growth strategy</p>
+            <p>Respect of tenors and target profitability</p>
+          </div>
+
+          <div class="team-intro-box">
+            <h3>Capacity Needs</h3>
+            <p>Capital adequacy for exposures</p>
+          </div>
+
+          <div class="team-intro-box">
+            <h3>Profitability Forecast</h3>
+            <p>Scenario modelling and stress tests</p>
+          </div>
+
+          <div class="team-intro-box">
+            <h3>Team Expertise</h3>
+            <p>Multidisciplinary team combining underwriting, actuarial, data and claims capabilities.</p>
+          </div>
+        </div>
+
+        <div class="team-intro-image">
+          <img src="images/InternaREV.jpg" alt="Foto InternaREV">
+        </div>
+      </div>
+
+      <h3 style="margin-top:30px;">Leadership Team</h3>
+
+      <div class="team-grid">
+        <div class="card team-card">
+          <h4>Yamilet Morote-Jagut</h4>
+          <img src="images/tya.png" alt="Foto Yami">
+
+          <div class="team-role">Chief Underwriting Officer – Co-founder</div>
+
+          <p>Mastère en Management financier international.</p>
+          <p>Green Belt Six Sigma</p>
+          <p>+30 years international experience</p>
+
+          <p>
+            Senior Reinsurance Underwriter in Surety, Credit, Mortgage &amp; Political Risk.
+            Experience at Beazley Re (Lloyd’s syndicate), Arundo Re, QBE Insurance, CESCE and General Electric.
+          </p>
+          <p>Based in Paris, France.</p>
+          <p><strong>Mobile:</strong> +33 645 55 43 60</p>
+          <p><strong>Email:</strong> yamilet.morote@aurinkore.com</p>
+        </div>
+
+        <div class="card team-card">
+          <h4>Cristina Rivas</h4>
+          <img src="images/Fotocristina.jpg" alt="Foto Cristina">
+
+          <div class="team-role">Chief Executive Officer – Co-founder</div>
+
+          <p>Master of Science (MS) in Actuarial Science.</p>
+          <p>25+ years of experience with senior roles at Swiss Re and Nacional de Reaseguros, managing portfolios over EUR 360 million.</p>
+          <p>55M+ in intermediated premiums across all reinsurance lines.</p>
+          <p>Based in Madrid, Spain.</p>
+          <p><strong>Mobile:</strong> +34 637 535 132</p>
+          <p><strong>Email:</strong> cristina.rivas@aurinkore.com</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="alt-section">
+    <div class="section-inner">
+      <h2>06 Portfolio Assessment &amp; Management</h2>
+
+      <div class="grid-2">
+        <div class="card portfolio-card">
+          <img src="images/RiskECE.jpg" alt="Foto RiskECE">
+          <h3>Risk Evaluation of Cedants</h3>
+          <ul>
+            <li>Portfolio quality assessment</li>
+            <li>Segmentation by product, geography, risk type, tenor and political risk</li>
+          </ul>
+        </div>
+
+        <div class="card portfolio-card">
+          <img src="images/PerformA.png" alt="Foto PerformA">
+          <h3>Performance Analysis</h3>
+          <ul>
+            <li>Actuarial models</li>
+            <li>Loss ratio, combined ratio, benchmarks</li>
+          </ul>
+        </div>
+
+        <div class="card portfolio-card">
+          <img src="images/dataco.png" alt="Foto dataco">
+          <h3>Data Collection</h3>
+          <ul>
+            <li>Underwriting data, loss ratios, exposure</li>
+            <li>Bordereaux management</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="strategy">
+    <div class="section-inner">
+      <h2>07 Reinsurance Strategy &amp; Placement</h2>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Structures</h3>
+          <ul>
+            <li><strong>Quota Share</strong>: proportional sharing of premiums and losses</li>
+            <li><strong>Excess of Loss</strong>: protection against large individual losses</li>
+            <li><strong>Stop Loss</strong>: aggregate protection for portfolio volatility</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Strategic Approach</h3>
+          <ul>
+            <li><strong>Define objectives:</strong> balanced credit &amp; surety portfolio</li>
+            <li><strong>Structure selection:</strong> match risk profile to reinsurance appetite</li>
+            <li><strong>Retention optimization:</strong> balance retained vs. ceded risk</li>
+          </ul>
+        </div>
+      </div>
+
+  
+  </section>
+
+  <section id="monitoring" class="monitoring-section">
+    <div class="section-inner">
+      <h2>08 Monitoring &amp; Positioning</h2>
+
+      <div class="monitoring-top">
+        <div class="monitoring-card">
+          <h3>Monitoring &amp; reporting</h3>
+          <ul>
+            <li>Monthly bordereaux and structured portfolio reporting</li>
+            <li>Claims reporting and KPI monitoring</li>
+            <li>Quarterly portfolio reviews, stress testing and strategic adjustments</li>
+          </ul>
+        </div>
+
+        <div class="monitoring-card">
+          <h3>Competitive advantages</h3>
+          <ul>
+            <li>Advanced analytics and modelling</li>
+            <li>Underwriting discipline and governance</li>
+            <li>Transparent reporting and reinsurer trust</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="monitoring-bars">
+        <div class="monitoring-bar">
+          Direct Reinsurer: broader platform, but often less specialized and less agile in niche treaty execution.
+        </div>
+
+        <div class="monitoring-bar">
+          MGA Partnership: specialist focus, flexible execution model and closer portfolio stewardship.
+        </div>
+
+        <div class="monitoring-bar">
+          Aurinko Re model: reinsurer-level technical rigor with the agility and proximity of a focused MGA partnership.
+        </div>
+      </div>
+
+
+  
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-box">
+      <h2>
+        Let’s build a resilient and profitable<br>
+        reinsurance portfolio together
+      </h2>
+
+      <div class="cta-divider"></div>
+
+      
+    </div>
+  </section>
+
+  <footer id="contact">
+  <div class="footer-content">
+    <p><strong>Aurinko Re</strong></p>
+    <p>
+      <a href="mailto:cristina.rivas@aurinkore.com">cristina.rivas@aurinkore.com</a> | 
+      <a href="mailto:yamilet.morote@aurinkore.com">yamilet.morote@aurinkore.com</a>
+    </p>
+
+    <p>Paseo de la Castellana, 85, 28046 Madrid, Spain</p>
+
+    <p class="legal-links">
+      <a href="cookies.html">Cookie Policy</a> |
+      <a href="#">Cookies Management</a> |
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="legal.html">Legal Notice</a>
+    </p>
+    <a href="#top" class="cta-button">Back to top</a>
+  </div>
+</footer>
+</body>
+</html>
+
